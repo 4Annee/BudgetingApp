@@ -1,8 +1,15 @@
 @import "../base/variables";
 
-.btn{
-    border-radius: 25%;
-    box-shadow: none;
+.btn {
+	border-radius: .7em;
+	padding: .5em 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	overflow-wrap: unset;
+	margin: auto;
 }
 
 @each $name,

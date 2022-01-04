@@ -19,9 +19,18 @@
 @import 'utilities/shadows';
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html,body{
+    font-family: 'Roboto', sans-serif;
+}
+
 // Background And Text Colors
 .rounded{
     border-radius: 8px;
+}
+
+.rounded-lg{
+    border-radius: 1.5em;
 }
 
 @each $name,
