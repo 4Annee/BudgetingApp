@@ -1,0 +1,47 @@
+//// Base
+@import 'base/variables';
+@import'base/spacing';
+@import'base/functions';
+@import'base/typography';
+//// Component
+@import 'components/buttons';
+@import 'components/tables';
+@import 'components/images';
+//// Layout
+@import 'layout/grid';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/sidebar';
+//// Sections
+@import 'sections/hero';
+//// Utilites
+@import 'utilities/shadows';
+
+
+// Background And Text Colors
+.rounded{
+    border-radius: 8px;
+}
+
+@each $name,
+$color in $Colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    .text-#{$name} {
+        color: $color;
+    }
+}
+.bg-dark{
+    color: white;
+}
+
+// Container
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: transparent;
+    align-self: center;
+}

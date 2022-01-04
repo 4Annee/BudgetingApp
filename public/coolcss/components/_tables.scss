@@ -1,0 +1,45 @@
+table{
+    width: 100%;
+    th{
+        background-color: black;
+        color: white;
+        text-align: left;
+    }
+    td{
+        background-color: rgb(243, 243, 243);
+    }
+    td,th{
+        padding: 0.4em;
+    }
+}
+
+table.text-center {
+    td,th{
+        text-align: center;
+    }
+}
+
+table.grey-lines{
+    tr:nth-child(2n+1)>td{
+        background-color: white;
+    }
+}
+
+table.black-lines{
+    tr:nth-child(2n+1)>td{
+        background-color: white;
+    }
+}
+/*
+
+    tr > th{
+        background-color: gray;
+    }
+    tr > th:first-child{
+        border-radius: 0.5em 0 0 0;
+    }
+    tr > th:last-child{
+        border-radius: 0 0.5em 0 0;
+    }
+
+*/
