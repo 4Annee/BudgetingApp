@@ -1,0 +1,16 @@
+@import "../base/variables";
+
+.btn{
+    border-radius: 25%;
+    box-shadow: none;
+}
+
+@each $name,
+$color in $Colors {
+    .btn-#{$name} {
+        background-color: $color;
+        @if($name =="dark"){
+            color: white;
+        }
+    }
+}

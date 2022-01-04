@@ -407,6 +407,45 @@
   text-align: center;
 }
 
+.btn {
+  border-radius: 25%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #0E76E5;
+}
+
+.btn-secondary {
+  background-color: #cccccc;
+}
+
+.btn-success {
+  background-color: #0fa55a;
+}
+
+.btn-danger {
+  background-color: #FF3C38;
+}
+
+.btn-warning {
+  background-color: #FF8C42;
+}
+
+.btn-info {
+  background-color: #86BBD8;
+}
+
+.btn-light {
+  background-color: #ebebeb;
+}
+
+.btn-dark {
+  background-color: #040F0F;
+  color: white;
+}
+
 table {
   width: 100%;
 }
