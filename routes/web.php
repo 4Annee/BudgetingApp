@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Use App\Http\Controllers\UserAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get("login",[UserAuth::class,'login']);
+Route::get("check",[UserAuth::class,'check_user']);
+Route::get("/welcome",[UserAuth::class,'profile']);
+Route::get("/logout",[UserAuth::class,'logout']);
+
+?>
