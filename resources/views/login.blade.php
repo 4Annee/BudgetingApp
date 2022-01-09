@@ -19,28 +19,30 @@ logo
 <h1 class="text-center"> Sign in to your account </h1> 
 <br>
 <div class="ml-10 ">
-<button class="btn-dark btn rounded px-4 p-sm-2  ">Sign in</button>
-<button class="btn-dark btn rounded px-4 p-sm-2 ">Sign up</button>
+<button class="btn-dark btn rounded px-4 p-sm-2 ">Sign in</button>
+<button class="btn-dark btn rounded px-4 p-sm-2">Sign up</button>
 </div>
 <div class="rounded bg-light  px-4 p-sm-2 ">
 <form action="check" methode="get">
     @csrf
     <br><br>
     <div class="bg-white rounded p-sm-2 ">
-    <input  type="text" name="name" placeholder="enter user name">
+    <input  type="text" name="name" placeholder="Enter user name">
     </div> <br>
     <div class="bg-white rounded p-sm-2 ">
-    <input type="password" name="password" placeholder="enter user password">
-    </div> <br> <br>
+    <input type="password" name="password" placeholder="Enter user password">
+    </div>
+    <div class="pt-1">
+        @if(session()->get('msg'))
+        <p class="text-danger">{{session()->get('msg')}}</p>
+        @endif
+        </div> 
     <a href=""><p class="text-center">Forget password ?</p></a><br>
-    <button type="submit" class="btn rounded px-4 p-sm-2 ml-10 " width="899PX">login</button>
+    <button type="submit" class="btn rounded px-4 p-sm-2 ml-10 btn_lgn">Login</button>
+    <br><br>
 </form> 
 
-<div class="pt-1">
-@if(session()->get('msg'))
-<p class="text-danger">{{session()->get('msg')}}</p>
-@endif
-</div>
+
 </div>
 </div>
 </td>

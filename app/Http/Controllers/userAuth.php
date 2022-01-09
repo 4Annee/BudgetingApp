@@ -25,7 +25,7 @@ class userAuth extends Controller
         }
         else
         {
-            return redirect('/login')->with('msg','email or password does not match');
+            return redirect('/login')->with('msg','User name or password does not match');
         } 
 
         
