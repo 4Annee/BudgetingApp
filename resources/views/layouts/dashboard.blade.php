@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- STYLESHEET -->
     <!--<link rel="stylesheet" href="https://raw.githubusercontent.com/4Annee/CoolFrameworkCSS/main/Styles/style.css">-->
-    <link rel="stylesheet" href="http://localhost/BudgetingApp/public/css/app.css">
-    <link rel="stylesheet" href="http://localhost/BudgetingApp/public/coolcss/style.css">
-    <link rel="stylesheet" href="http://localhost/BudgetingApp/public/coolcss/dashboardStyle.css">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('coolcss/style.css')}}">
+    <link rel="stylesheet" href="{{asset('coolcss/dashboardStyle.css')}}">
     <!-- MATERIAL ICONS CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!-- GOOGLE FONTS (ROBOTO) -->
@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     <nav class="w-100 bg-white my-0 mx-auto">
         <div class="flexrow container2">
-            <img src="http://localhost/BudgetingApp/public/images/logo.png" class="logo w-100">
+            <img src="{{asset('images/logo.png')}}" class="logo w-100">
             <div class="bg-light rounded flexrow text-gray-light search-bar">
                 <span class="material-icons-sharp">search</span>
                 <input type="search" placeholder="Search" class="text-dark bg-light w-100">
