@@ -1,4 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.p-0 {
+  padding: 0em;
+}
+
+.p-sm-0 {
+  padding: 0em;
+}
+
+.p-lg-0 {
+  padding: 0em;
+}
+
+.pt-0 {
+  padding-top: 0em;
+}
+
+.pb-0 {
+  padding-bottom: 0em;
+}
+
+.pl-0 {
+  padding-left: 0em;
+}
+
+.pr-0 {
+  padding-right: 0em;
+}
+
+.py-0 {
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+.px-0 {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.m-0 {
+  margin: 0em;
+}
+
+.m-sm-0 {
+  margin: 0em;
+}
+
+.m-lg-0 {
+  margin: 0em;
+}
+
+.mt-0 {
+  margin-top: 0em;
+}
+
+.mb-0 {
+  margin-bottom: 0em;
+}
+
+.ml-0 {
+  margin-left: 0em;
+}
+
+.mr-0 {
+  margin-right: 0em;
+}
+
+.my-0 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.my-sm-0 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.mx-0 {
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
 .p-1 {
   padding: 1em;
 }
@@ -408,6 +489,10 @@
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .title-1 {
   font-size: 4em;
 }
@@ -426,6 +511,10 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-bolder {
+  font-weight: 900;
 }
 
 .text-lg {
@@ -733,5 +822,13 @@ html, body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
 }
 /*# sourceMappingURL=style.css.map */
