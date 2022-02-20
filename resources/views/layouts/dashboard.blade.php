@@ -17,9 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Dashboard -</title>
 </head>
-<body class="bg-light font-roboto mh-100 text-dark">
+<body class="font-roboto mh-100">
     <!-- NAVBAR -->
-    <nav class="w-100 bg-white my-0 mx-auto">
+    <nav class="w-100 my-0 mx-auto">
         <div class="flexrow container2">
             <img src="http://localhost/BudgetingApp/public/images/logo.png" class="logo w-100">
             <div class="bg-light rounded flexrow text-gray-light search-bar">
@@ -27,16 +27,27 @@
                 <input type="search" placeholder="Search" class="text-dark bg-light w-100">
             </div>
             <div class="flexrow profile-area">
-                <div class="flexrow bg-light rounded p-sm-1 theme-btn ">
-                    <span class="material-icons-sharp flexrow flexcol.centered flexrow.centered bg-dark rounded-5 text-white">light_mode</span>
-                    <span class="material-icons-sharp flexrow flexcol.centered flexrow.centered">dark_mode</span>
+                <div class="flexrow rounded p-sm-1 theme-btn ">
+                    <span class="material-icons-sharp" id="theme">invert_colors</span>
                 </div>
                 <div class="flexrow profile">
                     <div class="profile-photo">
                         <img src="http://localhost/BudgetingApp/public/images/profile.png" class="w-100">
                     </div>
                     <h5>Username</h5>
-                    <span class="material-icons-sharp">expand_more</span>
+                    <span class="material-icons-sharp expand" onclick="menu()">expand_more</span>
+                    <div class="menu bg-gray-dark">
+                        <ul>
+                            <li>
+                              <span class="material-icons-sharp">person</span>
+                              <a href="#"  class="pl-1">Profile</a>
+                            </li>
+                            <li>
+                              <span class="material-icons-sharp">logout</span>
+                              <a href="#" class="pl-1">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <button>
                     <span class="material-icons-sharp">menu</span>
@@ -57,19 +68,19 @@
                     <span class="material-icons-sharp ml-2">grid_view</span>
                     <h4>Dashboard</h4>
                 </a>
-                <a href="#" class="flexrow text-gray">
+                <a href="accounts.blade.php" class="flexrow text-gray">
                     <span class="material-icons-sharp ml-2">manage_accounts</span>
                     <h4>Accounts</h4>
                 </a>
-                <a href="#" class="flexrow text-gray">
-                    <span class="material-icons-sharp ml-2">account_balance_wallet</span>
-                    <h4>Savings</h4>
-                </a>
-                <a href="#" class="flexrow text-gray">
+                <a href="transactions.blade.php" class="flexrow text-gray">
                     <span class="material-icons-sharp ml-2">attach_money</span>
-                    <h4>Loans</h4>
+                    <h4>Transactions</h4>
                 </a>
-                <a href="#" class="flexrow text-gray" id="last-elt">
+                <a href="stats.blade.php" class="flexrow text-gray">
+                    <span class="material-icons-sharp ml-2">trending_up</span>
+                    <h4>Stats</h4>
+                </a>   
+                <a href="settings.blade.php" class="flexrow text-gray" id="last-elt">
                     <span class="material-icons-sharp ml-2">settings</span>
                     <h4>Settings</h4>
                 </a>
@@ -207,7 +218,7 @@
             <div class="transactions">
                 <div class="flexrow flexcol.centered mt-1 p-1 pb-0 header">
                     <h3>Transactions</h3>
-                    <a href="#" class="ml-4"><span class="material-icons-sharp">chevron_right</span> </a>
+                    <a href="transactions.blade.php" class="ml-4"><span class="material-icons-sharp">chevron_right</span> </a>
                 </div>
                 <div class="flexrow flexcol.centered p-sm-2 transaction">
                     <div class="flexrow flexcol.centered left">
@@ -263,6 +274,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="http://localhost/BudgetingApp/public/js/dash.js"></script>
+    <script>
+        function menu() {
+            const menu = document.querySelector(".menu");
+            menu.classList.toggle("active");
+        }
+        var theme_btn = document.querySelector(".theme-btn");
+        var navBar = document.querySelector("nav");
+        theme_btn.addEventListener("click", () => {
+            document.body.classList.toggle('dark');
+            navBar.classList.toggle('dark');
+            theme_btn.classList.toggle('dark');
+        })
+    </script>
     <!-- END OF MAIN -->
     <!-- @yield('content') ->
 </body>

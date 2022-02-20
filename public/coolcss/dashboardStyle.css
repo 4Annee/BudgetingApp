@@ -1,3 +1,8 @@
+:root {
+    --dark-background-color: #040F0F;
+    --dark-text-color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +14,29 @@
     box-sizing: border-box;
 }
 
-//still not working ...
-body.dark {
-    background-color: #040F0F;
+body {
+    /* Light Theme */
+    --background-color: #ebebeb;
+    --text-color: #040F0F;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+nav {
+    --background-color: white;
+    --text-color: black;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+
+body.dark, nav.dark, .theme-btn.dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+}
+
+nav.dark {
+    border-bottom: 0.5px solid white;
 }
 
 .container2 {
@@ -38,23 +63,18 @@ nav .search-bar {
 nav .profile-area {
     align-items: center;
     justify-content: space-between;
-    gap: 4em;
+    gap: 1.3em;
 }
 
 nav .profile-area .theme-btn {
-    width: 4.5em;
+    width: 2.5em;
     height: 2.3em;
     gap: 0.2em;
     cursor: pointer;
+    background: #ebebeb;
 }
 
-nav .profile-area .theme-btn span {
-    width: 50%;
-    height: 100%;
-    padding-left: 0.2em;
-    padding-top: 0.1em;
-    font-size: 1.1em;
-}
+
 
 nav .profile-area .profile {
     gap: 1em;align-items: center;
@@ -68,6 +88,60 @@ nav .profile-area .profile .profile-photo {
     overflow: hidden;
 }
 
+nav .profile-area .profile .expand {
+    cursor: pointer;
+}
+
+nav .profile-area .profile .menu {
+    position: absolute;
+    top: 60px;
+    right: -25px;
+    padding: 10px 20px;
+    width: 180px;
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transition: 0.5s;
+    font-weight: 500;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+
+nav .profile-area .profile .menu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav .profile-area .profile .menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: gray;
+    transform: rotate(45deg);
+}
+  
+nav .profile-area .profile .menu ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+nav .profile-area .profile .menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #eee;
+}
+  
+nav .profile-area .profile .menu ul li:hover a {
+  color: #fff;
+}
 
 nav .profile-area button,
 main aside button {
@@ -131,6 +205,68 @@ main section.middle {
     overflow: hidden;
 }
 
+#add {
+    position: relative;
+    padding: 10px 40px;
+    background-color: #0e76e5;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    left: 99px;
+    top: 30px;
+    cursor: pointer;
+}
+
+#add a {
+    text-decoration: none;
+    color: white;
+}
+
+
+main section.middle table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #ccc;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+main section.middle table thead {
+  box-shadow: 0 5px 10px #ccc;
+}
+  
+main section.middle table thead th {
+  padding: 20px 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 900;
+  background-color: #0E76E5;
+  text-align: center;
+}
+
+main section.middle table tbody tr {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+main section.middle table tbody tr:hover {
+    background-color: #eee;
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px #ccc;
+}
+
+main section.middle table tbody td {
+  padding: 25px 25px;
+}
+
+main section.middle table tbody.dark {
+    color: #000000;
+    background-color: #eeeeee;
+    
+}
+
 main section.middle .header {
     gap: 1em;
 }
@@ -165,7 +301,6 @@ main section.middle .cards .card {
 
 main section.middle .cards .card:nth-child(3) {
     background: linear-gradient(#ffe259, #ffa751);
-
 }
 
 main section.middle .cards .card:hover {
