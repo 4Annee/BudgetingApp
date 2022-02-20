@@ -65,7 +65,7 @@
                 <p>Users can also define a monthly limit for each of the categories and he'll be warned by email once suprassing that limit.</p>
             </div>
             <div class="col-8 p-2">
-                <img alt="Imageofdashboard">
+                <img alt="Imageofdashboard" class="w-100" src="{{asset('images/dashboard.png')}}">
             </div>
         </div>
     </div>
