@@ -16,3 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/Dashboard', function () {
+    return view('dashboard.index',['page'=>'Index']);
+});
+Route::get('/Accounts', function () {
+    return view('dashboard.accounts',['page'=>'Accounts']);
+});
+Route::get('/Transactions', function () {
+    return view('dashboard.transactions',['page'=>'Transactions']);
+});
+Route::get('/Stats', function () {
+    return view('dashboard.stats',['page'=>'Stats']);
+});
+Route::get('/Settings', function () {
+    return view('dashboard.settings',['page'=>'Settings']);
+});
+
+?>
