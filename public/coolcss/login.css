@@ -1,9 +1,10 @@
+
 input {
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: groove;
-    width: 100%;
+    width: 600px;
     background-color: white;
     
   }
@@ -13,5 +14,39 @@ a{
 }
 .btn_lgn
 {
-    width: 50%;
+        background-color: rgb(245, 243, 239);
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+ }
+ .btn_lgn:hover
+{
+        background-color: rgb(245, 243, 239);
+        padding: 15px 20px;
+        border:solid 1PX #00021f ;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        transition: 0.5s ease-in-out;
+        stroke-dashoffset: 1120;
 }
+ 
+.btn-blue {
+  background-color: #00021f;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  width: 300PX;
+
+}
+.btn-blue:hover {
+  background-color: #f7d206;
+  color:black;
+  transition: 0.5s ease-in-out;
+ 
+
+}
+
+

@@ -365,6 +365,10 @@
   padding-left: 5em;
   padding-right: 5em;
 }
+.px-6{
+  padding-left: 6em;
+  padding-right:6em;
+}
 .px-15 {
   padding-left: 15em;
   padding-right: 15em;
@@ -509,7 +513,7 @@ img .w-100 {
   -webkit-column-gap: 0.5em;
           column-gap: 0.5em;
   -ms-grid-columns: (1fr)[12];
-      grid-template-columns:repeat(12, 1fr);
+      grid-template-columns:repeat(12,1fr);
 }
 
 .col-1 {
