@@ -33,4 +33,8 @@ Route::get('/Settings', function () {
     return view('dashboard.settings',['page'=>'Settings']);
 });
 
+Route::get('/add', function () {
+    return view('dashboard.addTransaction',['page'=>'addTransaction']);
+})
+
 ?>
