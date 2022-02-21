@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('coolcss/style.css')}}">
     <link rel="stylesheet" href="{{asset('coolcss/dashboardStyle.css')}}">
+    @yield('CssPlaceholder')
     <!-- MATERIAL ICONS CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!-- GOOGLE FONTS (ROBOTO) -->

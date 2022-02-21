@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,7 @@ Route::get('/', function () {
 Route::get('/Dashboard', function () {
     return view('dashboard.index',['page'=>'Index']);
 });
-Route::get('/Accounts', function () {
-    return view('dashboard.accounts',['page'=>'Accounts']);
-});
+Route::get('/Accounts', [AccountController::class,'index']);//->middleware('auth');
 Route::get('/Transactions', function () {
     return view('dashboard.transactions',['page'=>'Transactions']);
 });
