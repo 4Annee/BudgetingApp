@@ -42,8 +42,8 @@
         <p class="text-danger">{{session()->get('msg')}}</p>
         @endif
     </div> 
-    <a href=""><p class="text-center">Forget password ?</p></a><br><br>
     <button type="submit" class="btn_lgn rounded"><b>Sign in</b></button> 
+    <a href=""><p class="text-center">Forget password ?</p></a><br><br>
     <a href=""><p class="text-center">You don't have an account? Sign up </p></a>
     <br><br><br><br>
 </form> 

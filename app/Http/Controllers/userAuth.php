@@ -7,7 +7,7 @@ class userAuth extends Controller
 {
     public function login()
     {
-        return view('login');
+        return view('UserAuth.login');
     } 
 
     public function check_user(Request $req)
@@ -42,7 +42,7 @@ class userAuth extends Controller
         {
             $username=$req->session()->get('user_name');
             $capsule =  array('username'=> $username);
-            return view('/profile')->with($capsule);
+            return view('UserAuth.profile')->with($capsule);
         }
     } 
 
