@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
+Use App\Http\Controllers\UserAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,11 @@ Route::get('/Stats', function () {
 Route::get('/Settings', function () {
     return view('dashboard.settings',['page'=>'Settings']);
 });
+
+
+Route::get("login",[UserAuth::class,'login']);
+Route::get("check",[UserAuth::class,'check_user']);
+Route::get("/welcome",[UserAuth::class,'profile']);
+Route::get("/logout",[UserAuth::class,'logout']);
 
 ?>

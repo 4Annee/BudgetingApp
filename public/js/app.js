@@ -19317,6 +19317,9 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve 'style.css' in 'C:\\xampp\\htdocs\\BudgetingApp\\resources\\css'\n    at finishWithoutResolve (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:293:18)\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:362:15\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:87:43\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at processResult (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\webpack\\lib\\NormalModule.js:751:19)\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\webpack\\lib\\NormalModule.js:853:5\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\BudgetingApp\\node_modules\\css-loader\\dist\\index.js:155:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)");
 
 /***/ }),
 
@@ -19556,7 +19559,6 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -19590,9 +19592,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
 /******/ 				return this || new Function('return this')();
@@ -19689,6 +19689,9 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	__webpack_require__("./resources/js/app.js");
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./resources/css/app.css");
 /******/ 	
 /******/ })()
 ;
