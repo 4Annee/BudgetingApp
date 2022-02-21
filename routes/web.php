@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Transactions;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,9 @@ Route::get('/Settings', function () {
 
 Route::get('/add', function () {
     return view('dashboard.addTransaction',['page'=>'addTransaction']);
-})
+});
 
+Route::get('/confirm', [Transactions::class, 'insert']);
+
+Route::get('/Transactions', [Transactions::class, 'show']);
 ?>
