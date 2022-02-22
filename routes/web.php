@@ -21,22 +21,25 @@ Route::get('/', function () {
 
 Route::get('/Dashboard', function () {
     return view('dashboard.index',['page'=>'Index']);
-});
-Route::get('/Accounts', [AccountController::class,'index']);//->middleware('auth');
+})->middleware('loginrequired');
+
+Route::get('/Accounts', [AccountController::class,'index'])->middleware('loginrequired');
+Route::post('/Accounts/Create', [AccountController::class,'create'])->middleware('loginrequired');
+
 Route::get('/Transactions', function () {
     return view('dashboard.transactions',['page'=>'Transactions']);
-});
+})->middleware('loginrequired');
 Route::get('/Stats', function () {
     return view('dashboard.stats',['page'=>'Stats']);
-});
+})->middleware('loginrequired');
 Route::get('/Settings', function () {
     return view('dashboard.settings',['page'=>'Settings']);
-});
+})->middleware('loginrequired');
 
 
-Route::get("login",[UserAuth::class,'login']);
+Route::get("login",[UserAuth::class,'login'])->name('login');
 Route::get("check",[UserAuth::class,'check_user']);
-Route::get("/welcome",[UserAuth::class,'profile']);
+Route::get("/welcome",[UserAuth::class,'profile'])->middleware('loginrequired');
 Route::get("/logout",[UserAuth::class,'logout']);
 
 ?>

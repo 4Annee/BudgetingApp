@@ -163,6 +163,7 @@ main aside {
 }
 
 main aside .sidebar a {
+    color: black;
     align-items: center;
     gap: 1.2em;
     height: 3.5em;
@@ -365,11 +366,13 @@ main section.right .categories .header {
 
 main section.right .categories .category {
     justify-content: flex-start;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
+    border-radius: .8em;
 }
 
 main section.right .categories .category:hover {
-    background: #eeeeee;
+    background: #8bbcdd;
+    border-radius: .8em;
     cursor: pointer;
 }
 

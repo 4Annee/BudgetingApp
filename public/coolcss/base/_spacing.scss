@@ -57,9 +57,15 @@
     .ml-#{$i}{
         margin-left: $i*1em;
     }
+    .ml-sm-#{$i}{
+        margin-left: $i*.5em;
+    }
     
     .mr-#{$i}{
         margin-right: $i*1em;
+    } 
+    .mr-sm-#{$i}{
+        margin-right: $i*.5em;
     }   
     .my-#{$i}{
         margin-top: $i*1em;

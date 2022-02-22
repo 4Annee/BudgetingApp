@@ -5,9 +5,9 @@ use App\Models\User;
 
 class userAuth extends Controller
 {
-    public function login()
+    public function login(Request $req)
     {
-        return view('UserAuth.login');
+        return view('UserAuth.login',['redirect'=>$req->redirect]);
     } 
 
     public function check_user(Request $req)
@@ -21,6 +21,9 @@ class userAuth extends Controller
             $req->session()->put('user_id',$session[0]->id);
             $req->session()->put('user_name',$session[0]->name); 
 
+            if(isset($req->redirectto)){
+                return redirect($req->redirectto);
+            }
             return redirect('/welcome');
         }
         else

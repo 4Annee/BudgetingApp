@@ -37,7 +37,7 @@
                     </div>
                     <h5>Username</h5>
                     <span class="material-icons-sharp expand" onclick="menu()">expand_more</span>
-                    <div class="menu bg-gray-dark">
+                    <div class="menu bg-dark">
                         <ul>
                             <li>
                               <span class="material-icons-sharp">person</span>

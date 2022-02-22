@@ -14,7 +14,7 @@ a{
 }
 .btn_lgn
 {
-        background-color: rgb(245, 243, 239);
+        background-color: cornflowerblue;
         padding: 15px 20px;
         border: none;
         cursor: pointer;
@@ -23,13 +23,11 @@ a{
  }
  .btn_lgn:hover
 {
-        background-color: rgb(245, 243, 239);
+        background-color: rgb(69, 128, 240);
         padding: 15px 20px;
-        border:solid 1PX #00021f ;
         cursor: pointer;
-        width: 100%;
-        opacity: 0.9;
-        transition: 0.5s ease-in-out;
+        opacity: 1;
+        transition: 0.2s ease-in-out;
         stroke-dashoffset: 1120;
 }
  

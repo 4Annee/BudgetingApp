@@ -123,7 +123,7 @@
         <span class="material-icons-sharp p-sm-0 bg-primary rounded text-white">category</span>
             <div class="text ml-1">
                 <h3>Other</h3>
-                <h5 class="text-gray">$145.000.000</h55>
+                <h5 class="text-gray">$145.000.000</h5>
             </div>
         </div>
     </div>
@@ -172,7 +172,7 @@
         <div class="flexrow flexcol.centered p-sm-2 transaction">
             <div class="flexrow flexcol.centered left">
                 <span class="material-icons-sharp text-gray">podcasts</span>
-                <div class="text ml-sm-1">
+                <div class="text ml-sm-2">
                     <h3>Spotify</h3>
                     <h5 class="text-gray">15 Jan 2021</h5>
                 </div>
