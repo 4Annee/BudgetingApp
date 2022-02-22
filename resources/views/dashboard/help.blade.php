@@ -18,15 +18,15 @@
             <p class="mt-1">
               &nbsp;&nbsp;&nbsp; This section contains answers to most frequently asked questions in order to help you find the answer to yours.
             </p>
-            <h4 class="mt-2"><i>What is Brand?</i></h4>
+            <h4 class="mt-2"><i>What is ESIBudgeting?</i></h4>
             <p class="mt-1">
-              &nbsp;&nbsp;&nbsp; Brand is a professional website focused on managing user bank accounts and transactions.
+              &nbsp;&nbsp;&nbsp; ESIBudgeting is a professional website focused on managing user bank accounts and transactions.
               It's a website where users are able to track their incomes, spendings, savings and manage
               the different cards he has.
             </p>
             <h4 class="mt-2"><i>How does it work?</i></h4>
             <p class="mt-1">
-              &nbsp;&nbsp;&nbsp; Brand is an easy-to-browse plateform. In order to be a part of the
+              &nbsp;&nbsp;&nbsp; ESIBudgeting is an easy-to-browse plateform. In order to be a part of the
               community, you will have to create an account first. After
               becoming an official member, you will be directed to your
               dashboard, where you will find on the left side of your page

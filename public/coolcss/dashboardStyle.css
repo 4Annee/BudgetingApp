@@ -272,7 +272,7 @@ main section.middle .header {
     gap: 1em;
 }
 
-main section.middle .cards {
+main section.middle .cards, .Mycards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
@@ -293,42 +293,42 @@ main section.middle .cards .card-first .btm {
     gap: 0.3em;
 }
 
-main section.middle .cards .card {
+main section.middle .cards .card, .Mycards .card {
     background: linear-gradient(#757f9a, #d7dde8);
     height: 10em;
     justify-content: space-between;
     transition: all 200ms ease;
 }
 
-main section.middle .cards .card:nth-child(3) {
+main section.middle .cards .card:nth-child(3), .Mycards .card:nth-child(2) {
     background: linear-gradient(#ffe259, #ffa751);
 }
 
-main section.middle .cards .card:hover {
+main section.middle .cards .card:hover, .Mycards .card:hover {
     box-shadow: none;
 }
 
 main section.middle .cards .card .top,
-main section.middle .cards .card .middleCard {
+main section.middle .cards .card .middleCard, .Mycards .card .top, .Mycards .card .middleCard {
     justify-content: space-between;
     gap: 4em;
 }
 
-main section.middle .cards .card .top .left {
+main section.middle .cards .card .top .left, .Mycards .card .top .left {
     gap: 0.3em;
 }
 
-main section.middle .cards .card .top .left h4 {
+main section.middle .cards .card .top .left h4, .Mycards .card .top .left h4 {
     font-weight: 200;
     padding-top: 0.6em;
 }
 
-main section.middle .cards .card .top .left img {
+main section.middle .cards .card .top .left img, .Mycards .card .top .left img {
     width: 2.1em;
     height: 2.1em;
 }
 
-#img_euro {
+#img_euro, #img_euro2 {
     border: 1.5px solid black;
     border-radius: 50%;
     overflow: hidden;
@@ -336,17 +336,17 @@ main section.middle .cards .card .top .left img {
 }
 
 main section.middle .cards .card .top img.right,
-main section.middle .cards .card .middleCard .chip {
+main section.middle .cards .card .middleCard .chip, .Mycards .card .top img.right, .Mycards .card .middleCard .chip {
     width: 3em;
     height: 2em;
 }
 
-main section.middle .cards .card .bottom {
+main section.middle .cards .card .bottom, .Mycards .card .bottom {
     justify-content: space-between;
     align-items: flex-end;
 }
 
-main section.middle .cards .card .bottom .right {
+main section.middle .cards .card .bottom .right, .Mycards .card .bottom .right {
     gap: 1.5em;
 }
 
@@ -471,6 +471,7 @@ main section.right .transactions .transaction .right h4 {
 .sett .titlesContainer {
     position: relative;
     height: 10%;
+    margin-top: 20px;
 }
 
 .sett .titlesContainer ul li {

@@ -12,9 +12,9 @@
         </div>
         <div class="about1">
             <img src="{{asset('images/Development focus-pana.png')}}">
-            <h2>About Brand</h2>
+            <h2>About ESIBudgeting</h2>
             <p>
-                Brand is founded by a team of developers, with the purpose of making the process of dealing with money
+                ESIBudgeting is founded by a team of developers, with the purpose of making the process of dealing with money
                 easier. This plateform was made specifically for those who need help with tracking their spendings and 
                 savings.
                 <br>
