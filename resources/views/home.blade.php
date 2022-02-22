@@ -25,7 +25,7 @@
                 <div>
                     <h1 class="title-1">Every Dinar Counts</h1>
                     <p class="mb-3 text-lg">Monitor your spending habits, improve them and save more.</p>
-                    <a href="#" class="btn btn-primary text-light text-bold p-3 text-vlg">Get Started</a>
+                    <a href="/Dashboard" class="btn btn-primary text-light text-bold p-3 text-vlg">Get Started</a>
                 </div>
             </div>
             <div class="col-8">
@@ -105,8 +105,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" class="btn mt-2 btn-primary text-light text-bold p-3 text-vlg">Get Started</a>
-
+            <a href="/Dashboard" class="btn mt-2 btn-primary text-light text-bold p-3 text-vlg">Get Started</a>
         </div>
     </div>
 </body>

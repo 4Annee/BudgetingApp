@@ -26,10 +26,10 @@ class RegCtrl extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
         //sign in
-        return redirect()->route('home');
+        return redirect('/login?redirect=Dashboard');
         //store user
 }
 }

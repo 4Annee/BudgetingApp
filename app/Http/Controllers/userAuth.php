@@ -54,7 +54,7 @@ class userAuth extends Controller
         $req->session()->forget('user_id');
         $req->session()->forget('user_name'); 
 
-        return redirect('/login');
+        return redirect('/login?redirect=Dashboard');
     }
 }
 

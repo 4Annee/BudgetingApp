@@ -35,7 +35,7 @@
                     <div class="profile-photo">
                         <img src="/images/profile.png" class="w-100">
                     </div>
-                    <h5>Username</h5>
+                    <h5>User</h5>
                     <span class="material-icons-sharp expand" onclick="menu()">expand_more</span>
                     <div class="menu bg-dark">
                         <ul>

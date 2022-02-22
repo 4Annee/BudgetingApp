@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="coolcss/style.css">
     <link rel="stylesheet" href="coolcss/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>login</title>
     <style>
         body{
@@ -73,8 +72,8 @@
             </div> 
             <button type="submit" class="btn_lgn rounded mb-1"><b>Sign in</b></button> 
             <hr class="w-100 text-dark">
-            <small><a href=""><p class="text-primary text-center">Forget password ?</p></a></small>
-            <small><a href=""><p class="text-primary text-center">You don't have an account? Sign up </p></a></small>
+            <small><a href="#"><p class="text-primary text-center">Forget password ?</p></a></small>
+            <small><a href="/register"><p class="text-primary text-center">You don't have an account? Sign up </p></a></small>
         </form> 
     </div>
 </div>
