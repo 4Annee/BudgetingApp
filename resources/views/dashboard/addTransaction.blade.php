@@ -31,7 +31,7 @@
             </div>
             <div class="formInput">
                 <label>Amount</label>
-                <input type="text" name="amount" value="{{old('amount')}}">
+                <input type="number" min="0" name="amount" value="{{old('amount')}}">
                 <span style="color:red;">@error('amount') {{$message}} @enderror</span>
             </div>
             <input type="submit" name="addt" value="Confirm" id="addt">

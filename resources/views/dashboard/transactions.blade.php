@@ -2,7 +2,7 @@
 @section('DashboardContent')
 
         <section class="middle">
-            <button id="add"><a href="/add">Add</a></button>
+            <button id="add"><a href="/Transactions/add">Add</a></button>
             <table>
                 <thead>
                   <tr>

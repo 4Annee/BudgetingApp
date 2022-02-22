@@ -21,7 +21,7 @@ class Transactions extends Controller
             'Destination'=>$request->input('dest'),
             'Type'=>$request->input('selectType'),
             'Category'=>$request->input('selectCateg'),
-            'Amount'=>$request->input('amount')
+            'Amount'=>$request->input('amount'),
         ]);
 
         return redirect('Transactions');

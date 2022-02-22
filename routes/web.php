@@ -24,9 +24,6 @@ Route::get('/Dashboard', function () {
 Route::get('/Accounts', function () {
     return view('dashboard.accounts',['page'=>'Accounts']);
 });
-Route::get('/Transactions', function () {
-    return view('dashboard.transactions',['page'=>'Transactions']);
-});
 Route::get('/Stats', function () {
     return view('dashboard.stats',['page'=>'Stats']);
 });
@@ -34,8 +31,8 @@ Route::get('/Settings', function () {
     return view('dashboard.settings',['page'=>'Settings']);
 });
 
-Route::get('/add', function () {
-    return view('dashboard.addTransaction',['page'=>'addTransaction']);
+Route::get('/Transactions/add', function () {
+    return view('dashboard.addTransaction',['page'=>'Transaction']);
 });
 
 Route::get('/confirm', [Transactions::class, 'insert']);
