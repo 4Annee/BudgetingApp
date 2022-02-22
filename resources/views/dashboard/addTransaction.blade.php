@@ -4,7 +4,7 @@
         <h1 class="title">Add a transaction</h1>
         <form action="/confirm" method="get">
             <div class="formInput">
-                <label>Destination</label>
+                <label>Title</label>
                 <input type="text" name="dest" value="{{old('dest')}}">
                 <span style="color:red;">@error('name') {{$message}} @enderror</span>
             </div>
@@ -28,6 +28,15 @@
                     <option value="transfer">Transfer</option>
                 </select>
                 <span style="color:red;">@error('selectCateg') {{$message}} @enderror</span>
+            </div>
+            <div class="formInput">
+                <label>From/To</label>
+                <select name="accD" id="selA">
+                    @foreach ($accounts as $acc)
+                        <option value="{{$acc->id}}">{{$acc->name}}</option>
+                    @endforeach
+                </select>
+                <span style="color:red;">@error('accD') {{$message}} @enderror</span>
             </div>
             <div class="formInput">
                 <label>Amount</label>

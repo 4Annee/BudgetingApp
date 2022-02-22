@@ -1,5 +1,6 @@
 @extends('layouts.dashboard')
 @section('CssPlaceholder')  
+<script src="/js/jquery-3.6.0.js"></script>
 <style>
     .formdiv{
         display: flex;
@@ -52,34 +53,53 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        foreach ($accounts as $acc) {
-                            echo '<tr id="acc'.$acc->id.'">';
-                                echo '<td>'.$acc->name.'</td>';
-                                echo "<td>".$acc->balance."</td>";
-                                echo "<td>".$acc->type."</td>";
-                                echo '<td>'.'<a class="btn btn-primary m-1" href="#">Details</a>'.'<a class="btn btn-warning m-1" href="#">Edit</a>'.'<a class="btn btn-danger m-1" href="#">Delete</a>'.'</td>';
-                            echo "</tr>";
-                            echo '<tr class="hiddn">';
-                                echo '<td colspan=4>Are You Sure You Want To Delete '.'<button class="btn btn-danger delete" type="button" id="'.$acc->id.'">Delete</button></td>';
-                            echo "</tr>";
-                        }   
-                    ?>
+                    @foreach($accounts as $acc)
+                        <tr id="acc{{$acc->id}}">
+                            <td>{{$acc->name}}</td>
+                            <td>{{$acc->balance}}</td>
+                            <td>{{$acc->type}}</td>
+                            <td><a class="btn btn-primary m-1" href="#">Details</a><a class="btn btn-warning m-1" href="#">Edit</a><button class="btn btn-danger m-1 showdel" onclick="showdel(event)" href="#">Delete</button></td>
+                        </tr>
+                        <tr id="tr{{$acc->id}}" class="hidden">
+                            <td colspan=4>Are You Sure You Want To Delete this Account<button class="btn btn-danger delete" type="button" id="{{$acc->id}}">Delete</button><button class="btn btn-secondary cancel" type="button" id="c{{$acc->id}}">Cancel</button></td>
+                        </tr>
+                    @endforeach   
+                    
                     
                 </tbody>
             </table>
     </div>
     </div>
 
-    <script>
-        var buttons = document.ready(()=>{
-            querySelectorAll("button.delete");
-            buttons.forEach(button => {
-                button.onclick=DeleteElement(this.id);
-            });
-        });
-        DeleteElement(id){
-            alert(id);
+
+@endsection
+
+@section('scriptContent')
+<script>
+    $.ready(()=>{
+        
+        showdel(ev){
+            $('tr'+ev.target.id).css('display','block')
         }
-    </script>
+
+        $('button.showdel').on("click",function(){
+            alert(this.id);
+        });
+        $('button.showdel').on("click",function(){
+            alert(this.id);
+        });
+    });
+    var buttons = document.ready(()=>{
+        querySelectorAll("button.delete");
+        buttons.forEach(button => {
+            button.onclick=DeleteElement(this.id);
+        });
+    });
+    showdel(ev){
+        $('tr'+ev.target.id).css('display','block')
+    }
+    DeleteElement(id){
+        alert(id);
+    }
+</script>
 @endsection

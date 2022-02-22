@@ -41,11 +41,11 @@
                         <ul>
                             <li>
                               <span class="material-icons-sharp">person</span>
-                              <a href="#"  class="pl-1">Profile</a>
+                              <a href="/Profile"  class="pl-1">Profile</a>
                             </li>
                             <li>
                               <span class="material-icons-sharp">logout</span>
-                              <a href="#" class="pl-1">Logout</a>
+                              <a href="/logout" class="pl-1">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -106,5 +106,6 @@
             theme_btn.classList.toggle('dark');
         })
     </script>
+    @yield('scriptContent')
 </body>
 </html>

@@ -27,9 +27,6 @@ Route::get('/Dashboard', function () {
 Route::get('/Accounts', [AccountController::class,'index'])->middleware('loginrequired');
 Route::post('/Accounts/Create', [AccountController::class,'create'])->middleware('loginrequired');
 
-Route::get('/Transactions', function () {
-    return view('dashboard.transactions',['page'=>'Transactions']);
-})->middleware('loginrequired');
 Route::get('/Stats', function () {
     return view('dashboard.stats',['page'=>'Stats']);
 })->middleware('loginrequired');
@@ -40,14 +37,12 @@ Route::get('/Settings', function () {
 
 Route::get("login",[UserAuth::class,'login'])->name('login');
 Route::get("check",[UserAuth::class,'check_user']);
-Route::get("/welcome",[UserAuth::class,'profile'])->middleware('loginrequired');
+Route::get("/Profile",[UserAuth::class,'profile'])->middleware('loginrequired');
 Route::get("/logout",[UserAuth::class,'logout']);
 
-Route::get('/Transactions/add', function () {
-    return view('dashboard.addTransaction',['page'=>'Transaction']);
-});
+Route::get('/Transactions/add',[Transactions::class, 'index'])->middleware('loginrequired');
 
-Route::get('/confirm', [Transactions::class, 'insert']);
+Route::get('/confirm', [Transactions::class, 'insert'])->middleware('loginrequired');
 
-Route::get('/Transactions', [Transactions::class, 'show']);
+Route::get('/Transactions', [Transactions::class, 'show'])->middleware('loginrequired');
 ?>

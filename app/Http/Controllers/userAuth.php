@@ -24,7 +24,7 @@ class userAuth extends Controller
             if(isset($req->redirectto)){
                 return redirect($req->redirectto);
             }
-            return redirect('/welcome');
+            return redirect('/Profile',['page'=>'Profile']);
         }
         else
         {
@@ -44,7 +44,7 @@ class userAuth extends Controller
         else
         {
             $username=$req->session()->get('user_name');
-            $capsule =  array('username'=> $username);
+            $capsule =  array('username'=> $username,'page'=>'Profile Page');
             return view('UserAuth.profile')->with($capsule);
         }
     } 
