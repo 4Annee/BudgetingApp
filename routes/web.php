@@ -47,4 +47,16 @@ Route::get('/Transactions/add',[Transactions::class, 'index'])->middleware('logi
 Route::get('/confirm', [Transactions::class, 'insert'])->middleware('loginrequired');
 
 Route::get('/Transactions', [Transactions::class, 'show'])->middleware('loginrequired');
+
+Route::get('/Cards', function () {
+    return view('dashboard.cards',['page'=>'Cards']);
+});
+
+Route::get('/Help', function () {
+    return view('dashboard.help',['page'=>'Help']);
+});
+
+Route::get('/About', function () {
+    return view('dashboard.about',['page'=>'About']);
+});
 ?>
