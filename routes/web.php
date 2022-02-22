@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegCtrl;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 Use App\Http\Controllers\UserAuth;
@@ -15,7 +16,8 @@ use App\Http\Controllers\Transactions;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/register',[RegCtrl::class,'index'])->name('register');
+Route::post('/register',[RegCtrl::class,'store']);
 Route::get('/', function () {
     return view('home');
 });
