@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 Use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\Transactions;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,11 @@ Route::get("check",[UserAuth::class,'check_user']);
 Route::get("/welcome",[UserAuth::class,'profile'])->middleware('loginrequired');
 Route::get("/logout",[UserAuth::class,'logout']);
 
+Route::get('/Transactions/add', function () {
+    return view('dashboard.addTransaction',['page'=>'Transaction']);
+});
+
+Route::get('/confirm', [Transactions::class, 'insert']);
+
+Route::get('/Transactions', [Transactions::class, 'show']);
 ?>

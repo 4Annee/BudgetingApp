@@ -404,6 +404,64 @@ main section.right .transactions .transaction .right h4 {
     color: #566573;
 }
 
+.addTrans {
+    position: relative;
+}
+
+.addTrans .title {
+    top: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.addTrans .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 20px;
+    background-color: #2d87e7;
+}
+
+.addTrans form {
+    padding: 20px 0px 20px 50px;
+    box-sizing: border-box;
+}
+
+.addTrans form .formInput {
+    position: relative;
+    border-bottom: 2px solid darkgray;
+    margin: 30px 0;
+}
+
+.formInput input, select {
+    width: 97%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.formInput label {
+    position: relative;
+    color: gray;
+    font-size: 16;
+    pointer-events: none;
+}
+
+#addt {
+    position: relative;
+    background-color: #2d87e7;
+    padding: 12px 25px;
+    border-radius: 3px;
+    margin-left: 700px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 /* RESPONSIVE */
 /*@media screen and (max-width: 1024px) {
