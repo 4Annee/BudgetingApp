@@ -31,13 +31,15 @@ class Transactions extends Controller
 
     function show(Request $req) {
         // $userid=$req->session()->get('user_id');
-        // $accs = Account::where('user_id',$userid)->get()->map(function($acc){
-        //     return $acc->only(['id']);
-        // })->toArray();
+        // $accs = Account::where('user_id',$userid)->get();
+        // $acc_id = array();
+        // foreach ($accs as $acc) {
+        //     array_push($acc_id,$acc->id);
+        // }
         
         $data = Transaction::all();
         // $data = Transaction::cursor()->filter(function ($transaction){
-        //     return in_array($accs,$transaction->account_id) ;
+        //     return in_array($acc_id,$transaction->account_id) ;
         // });
 
         return view('dashboard.transactions',['data'=>$data, 'page'=>'Transactions']);
